@@ -7,9 +7,9 @@ import (
 )
 
 type Github struct {
-	TotalStars     int
-	TotalFollowers int
-	Mu             sync.RWMutex
+	TotalStars     int           `json:"total_stars,omitempty"`
+	TotalFollowers int           `json:"total_followers,omitempty"`
+	Mu             *sync.RWMutex `json:"-"`
 }
 
 const (
